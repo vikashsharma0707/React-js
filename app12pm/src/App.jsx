@@ -225,7 +225,7 @@ const App=()=>{
  }*/
 
 
-  import Table from 'react-bootstrap/Table';
+  /*import Table from 'react-bootstrap/Table';
 
   const App=()=>{
     return(
@@ -265,7 +265,143 @@ const App=()=>{
       </>
     )
 
-  }
+  }*/
+
+    import { Container, Row,Col } from "react-bootstrap";
+    /*const App=()=>{
+      return(
+        <>
+          <Container className="text-center  border bg-info pt-1">   
+
+            <h1>welcome to cybrom Bhoapl</h1>
+          </Container>
+        
+        </>
+
+      )
+    }*/
+
+      //import { Container, Row,Col } from "react-bootstrap";
+
+      /*const App=()=>{
+        return(
+
+          <>
+          <Container   className="border text-center my-5 p-5">
+            <Row>
+            <Col  className="border bg-danger p-5 text-white fs-1">
+               hello we are web developer
+            
+            </Col>
+
+            <Col  className="border bg-success p-5 text-white fs-1">
+            
+               welcome to cybrom
+            
+            </Col>
+
+
+            </Row>
+           
+
+          </Container>
+          
+          </>
+        )
+      }*/
+
+        // maximum md  12     
+    //import { Container, Row,Col } from "react-bootstrap";
+      // const App=()=>{
+      //   return(
+      //    <>
+      //    <Container fluid  className="border p-5 bg-info">
+      //     <Row>
+
+      //       <Col md={2} className="bg-danger  text-center  text-white fs-4 p-5">
+      //           hello react
+      //       </Col>
+      //       <Col md={4} className="bg-success  text-center  text-white fs-4 p-5">
+      //       hello react
+            
+      //       </Col>
+
+      //       <Col md={2} className="bg-dark  text-center  text-white fs-4 p-5">
+      //       hello react
+            
+      //       </Col>
+
+      //       <Col md={4} className="bg-primary  text-center  text-white fs-4 p-5">
+      //       hello react
+            
+      //       </Col>
+      //     </Row>
+
+
+
+      //    </Container>
+         
+         
+      //    </>
+
+      //   )
+      // }
+ 
+    //import { Container, Row,Col } from "react-bootstrap";
+         // double row and coloumn
+      const App=()=>{
+        return(
+         <>
+         <Container fluid  className="border p-5 bg-info">
+          <Row>
+
+            <Col  className="bg-danger  text-center  text-white fs-4 p-5">
+                hello react
+            </Col>
+            <Col  className="bg-success  text-center  text-white fs-4 p-5">
+            hello react
+            
+            </Col>
+
+            <Col  className="bg-dark  text-center  text-white fs-4 p-5">
+            hello react
+            
+            </Col>
+
+           
+          </Row>
+
+        <br/>
+
+          <Row>
+
+            <Col md={6} className="bg-danger  text-center  text-white fs-4 p-5">
+                hello react
+            </Col>
+            <Col md={3} className="bg-success  text-center  text-white fs-4 p-5">
+            hello react
+            
+            </Col>
+
+            <Col md={3} className="bg-dark  text-center  text-white fs-4 p-5">
+            hello react
+            
+            </Col>
+
+           
+          </Row>
+
+
+
+         </Container>
+         
+         
+         </>
+
+        )
+      }
+
+
 
 
  export default App;
