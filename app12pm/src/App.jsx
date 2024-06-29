@@ -1,40 +1,49 @@
-import { BrowserRouter ,Routes,Route } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./Layout";
-import Home from "./Home";
-import About from "./About";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
 import Contact from "./Contact";
-import Nopage from "./Nopage";
-
-
+import Services from "./Pages/Services";
+import Nopage from "./Pages/Nopage";
 
 
 const App=()=>{
-  return(
-  
-   <>
-    <BrowserRouter>
-        <Routes>
-           <Route path="/"  element={<Layout/>} >
-              <Route path="/home" element={<Home/>}/>
-               <Route path="/home"  element={<Home/>}/>
-               <Route path="/about"  element= {<About/>}/>
-               <Route path="/contact"  element={<Contact/>}/>
-               <Route path="/Nopage"   element={<Nopage/>} />
+   return(
+     <>
+       <BrowserRouter>
+         <Routes>
+            <Route  path="/"  element={<Layout/>}>
+               <Route  index element={<Home/>}/>
+               <Route  path="/home"  element={<Home/>}/>
+               <Route  path="/about"  element={<About/>}/>
+               <Route  path="/services" element={<Services/>}/>
+               <Route  path="/contact"  element={<Contact/>}/>
+               <Route path="*"  element={<Nopage/>}/>
+
                
-           
-           
-           
-           </Route>
+               
+
+               
+               
+              
+
+                 
+            </Route>
 
 
-        </Routes>
-    
-    
-    
-    </BrowserRouter>
-   
-   </>
-  )
+
+
+
+
+         </Routes>
+       </BrowserRouter>
+     
+     
+     </>
+
+
+   )
+
 }
 
 export default App;
