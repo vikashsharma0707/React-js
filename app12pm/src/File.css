@@ -1,0 +1,22 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.grid4{
+display: inline;
+display: flex;  
+/* justify-content: space-evenly;  */
+}
+
+
+
+
+.grid5{
+    margin-left: 50px;
+}
+
+.grid6{
+    margin-left: 100px;
+}
+

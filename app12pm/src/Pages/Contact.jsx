@@ -5,7 +5,7 @@
 const Contact=()=>{
     return(
         <>
-          <h1>this is contact page</h1>
+          <img src="public/b1.jpg"/>
         </>
     )
 }

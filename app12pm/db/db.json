@@ -1,0 +1,39 @@
+ 
+{
+
+ "student":[
+  {
+    "rollno" : 121,
+    "name" : "rahul",
+    "city" : "bhopal",
+    "fees" : 34500
+  },
+
+  {
+    "rollno" : 121,
+    "name" : "rahul",
+    "city" : "bhopal",
+    "fees" : 34500
+  },
+
+
+  {
+    "rollno" : 121,
+    "name" : "rahul",
+    "city" : "bhopal",
+    "fees" : 34500
+  },
+
+  {
+    "rollno" : 121,
+    "name" : "rahul",
+    "city" : "bhopal",
+    "fees" : 34500
+  }
+
+
+
+
+ ]
+
+}
