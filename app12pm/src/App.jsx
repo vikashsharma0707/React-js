@@ -1,3 +1,151 @@
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import Linkpage from "./Linkpage";
+import Home from "./Pageslink/Home";
+import About from "./Pageslink/About";
+import Contact from "./Pageslink/Contact";
+import Experience from "./Pageslink/Experience";
+
+
+
+const App=()=>{
+  return(
+     <>
+     <BrowserRouter>
+       <Routes>
+          <Route  path="/"   element={<Linkpage/>}>
+             <Route index element={<Home/>}/>
+             <Route path="home" element={<Home/>}/>
+             <Route path="about" element={<About/>}/>
+             <Route path="contact" element={<Contact/>}/>
+             <Route path="experience" element={<Experience/>}/>
+
+
+
+
+          </Route>
+
+
+
+
+       </Routes>
+     
+     
+     
+     
+     </BrowserRouter>
+     
+     
+     </>
+
+  )
+}
+
+
+
+
+export default App;
+
+
+
+
+
+
+
+/*import Link1 from "./Link1";
+import Link2 from "./Link2";
+
+const App=()=>{
+  return(
+    <>
+    <h1>this is App page</h1>
+    <hr/>
+     <Link1/>
+     <Link2/>
+    </>
+
+
+  )
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import Llayout from "./Llayout";
+
+
+const App=()=>{
+  return(
+   <>
+   
+   <Llayout/>
+   </>
+
+  )
+}*/
+
+
+
+// import Button from 'react-bootstrap/Button';
+// import Form from 'react-bootstrap/Form';
+
+
+// const App=()=>{
+//    const display=()=>{
+//     console.log(Form);
+//    }
+
+
+//   return(
+//    <>
+//    <div  style={{width:"400px",margin:"auto"}}>
+//    <Form>
+    
+//       <Form.Group className="mb-3" controlId="formBasicEmail">
+//         <Form.Label>Email address</Form.Label>
+//         <Form.Control type="email" placeholder="Enter email" />
+//         <Form.Text className="text-muted">
+//           We'll never share your email with anyone else.
+//         </Form.Text>
+//       </Form.Group>
+
+//       <Form.Group className="mb-3" controlId="formBasicPassword">
+//         <Form.Label>Password</Form.Label>
+//         <Form.Control type="password" placeholder="Password" />
+//       </Form.Group>
+//       <Form.Group className="mb-3" controlId="formBasicCheckbox">
+//         <Form.Check type="checkbox" label="Check me out" />
+//       </Form.Group>
+//       <Button onClick={display()} variant="primary" type="submit">
+//         Submit
+//       </Button>
+//     </Form>
+//     </div>
+    
+   
+//    </>
+
+
+//   )
+// }
 
 
 
@@ -226,46 +374,46 @@
 
 
 
-import { BrowserRouter ,Routes,Route } from "react-router-dom"
-import Layout from "./Layout";
-import Home from "./Home";
-import About from "./About";
-import Contact from "./Contact";
-import Nopage from "./Nopage";
-import Service from "./Service";
+// import { BrowserRouter ,Routes,Route } from "react-router-dom"
+// import Layout from "./Layout";
+// import Home from "./Home";
+// import About from "./About";
+// import Contact from "./Contact";
+// import Nopage from "./Nopage";
+// import Service from "./Service";
 
 
 
 
-const App=()=>{
-  return(
+// const App=()=>{
+//   return(
   
-   <>
-    <BrowserRouter>
-        <Routes>
-           <Route path="/"  element={<Layout/>} >
-              <Route path="/home" element={<Home/>}/>
-               <Route path="/home"  element={<Home/>}/>
-               <Route path="/about"  element= {<About/>}/>
-               <Route path="/contact"  element={<Contact/>}/>
-               <Route path="/Service"  element={<Service/>}/>
-               <Route path="/Nopage"   element={<Nopage/>} />
+//    <>
+//     <BrowserRouter>
+//         <Routes>
+//            <Route path="/"  element={<Layout/>} >
+//               <Route path="/home" element={<Home/>}/>
+//                <Route path="/home"  element={<Home/>}/>
+//                <Route path="/about"  element= {<About/>}/>
+//                <Route path="/contact"  element={<Contact/>}/>
+//                <Route path="/Service"  element={<Service/>}/>
+//                <Route path="/Nopage"   element={<Nopage/>} />
                
            
            
            
-           </Route>
+//            </Route>
 
-        </Routes>
+//         </Routes>
     
     
     
-    </BrowserRouter>
+//     </BrowserRouter>
    
-   </>
-  )
-}
+//    </>
+//   )
+// }
 
 
 
- export default App;
+//  export default App;
