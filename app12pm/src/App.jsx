@@ -1,4 +1,213 @@
 
+// use navigate hook
+
+// import { BrowserRouter, Route, Routes } from "react-router-dom"
+// import Lay from "./Lay"
+// import Home from "./Page/Home"
+// import About from "./Page/About"
+// import Contact from "./Page/Contact"
+
+
+
+// const App=()=>{
+//   return(
+//   <>
+//   <BrowserRouter>
+//       <Routes>
+//         <Route  path="/"   element={<Lay/>}>
+//           <Route path="home"  element={<Home/>}/>
+//           <Route path="about"  element={<About/>}/>
+//           <Route path="contact"  element={<Contact/>}/>
+
+
+
+//         </Route>
+
+
+//       </Routes>
+  
+  
+  
+//   </BrowserRouter>
+  
+//   </>
+
+//   )
+// }
+
+
+// export default App;
+
+
+
+
+
+
+
+
+
+const App=()=>{
+  return(
+    <>
+   <div style={{width:"200px" , height:"100px" , backgroundColor:"yellow" ,margin:"auto",marginTop:"50px"}}>
+   <div style={{width:"100px" , height:"40px" , backgroundColor:"red" ,margin:"auto",marginTop:"40px"}}>
+       <div style={{width:"80px" , height:"20px" , backgroundColor:"blue" ,margin:"auto",marginTop:"60px"}}>
+
+       </div>
+    </div>
+   </div>
+   </>
+
+  )
+}
+
+export default App;
+
+
+
+
+/*import Loader from "./Loader";
+
+
+const App=()=>{
+  return(
+    <>
+    <Loader/>
+    
+    </>
+  )
+}
+
+export default App;*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//use hook
+
+/*import { useEffect, useRef } from "react";
+import { useState } from "react";
+
+
+
+const App=()=>{
+   const [mydata ,setMydata] =useState("");
+   const myref =useRef(0);
+   const txtRef =useRef(0);
+
+   useEffect(()=>{
+    myref.current=myref.current+1;
+   })
+
+   const display=()=>{
+    txtRef.current.style.backgroundColor ="pink";
+   }
+
+   
+
+  return(
+    <>
+   <h1>this is cybrom class</h1>
+   <textarea value={mydata}  ref={txtRef}  onChange={()=>{setMydata(e.target.value)}}/>
+    <h1>Total count :{myref.current}</h1>
+    <button  onClick={display}>Click here</button>
+   </>
+  
+  )
+}
+
+
+export default App;*/
+
+// import { useEffect } from "react";
+// import { useRef } from "react";
+// import { useState } from "react";
+
+// const App=()=>{
+//   const [mydata, setMydata] = useState("")
+
+//   const myref= useRef(0);
+//   const txtRef =useRef(0);
+
+//   useEffect(()=>{
+//     myref.current=myref.current+1
+//   })
+
+//   const display=()=>{
+//     txtRef.current.style.backgrounColor ="pink";
+//   }
+//   return(
+//    <>
+//      <h1>this is cybrom page</h1>
+//      <textarea value={mydata} ref={txtRef} onChange={(e)=>{setMydata(e.target.value)}}/>
+//       <h1>Toatal count : {myref.current}</h1>
+//       <button  onClick={display}>click here</button>  
+//    </>
+
+
+//   )
+
+// }
+
+// export default App;
+
+
+
+
+
+
+/*import { useRef } from "react";
+
+
+
+
+
+
+const App=()=>{
+
+  const myref= useRef(0);
+  const display=()=>{
+    myref.current.style.backgroundColor ="yellow"
+  }
+   return(
+    <>
+     <h1>this is app page</h1>
+     <input type="text" ref={myref}/>
+     <button   onClick={display}>click here</button>
+     </>
+  )
+}*/
+
+//export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //ternary operator
 
 
@@ -29,7 +238,7 @@ export default App;*/
 
 
 
-import Ccollege from "./Ccollege"
+/*import Ccollege from "./Ccollege"
 const App=()=>{
   return(
     <>
@@ -41,13 +250,9 @@ const App=()=>{
 
 
   )
-}
+}*/
 
-export default App;
-
-
-
-
+/*export default App;*/
 
 
 
