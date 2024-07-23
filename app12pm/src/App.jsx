@@ -1,3 +1,159 @@
+import Cybrom2 from "./Cybrom2";
+
+const App=()=>{
+
+  return(
+    <>
+      <h1>my bgcolor App  </h1>
+         <Cybrom2/>
+     
+    </>
+  )
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// global state management
+//context api
+//create context and usecontext
+
+
+/*import { useState } from "react";
+import Bhopal1 from "./Bhopal1";
+
+import { createContext } from "react";
+
+const courseContext= createContext()
+
+const App=()=>{
+
+  const [course,setCourse] = useState("java");
+
+  return(
+    <>
+  
+    <h1> this is app page</h1>
+    <courseContext.Provider value={{course}}>
+      <Bhopal1/>
+    </courseContext.Provider>
+    </>
+  )
+}
+export default App;
+export {courseContext};*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import { useState } from "react"
+
+
+import Componet1 from "./Prop/Compnent1";
+
+const App=()=>{
+
+  const [user,setuser] =useState("jay");
+  return(
+    <>
+    <h1>this is app page {user}</h1>
+    <Componet1 user={user}/>
+    
+    </>
+  )
+
+}
+
+export default App*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//react hook context hook
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // use navigate hook
 
@@ -46,11 +202,11 @@
 
 
 
-const App=()=>{
+/*const App=()=>{
   return(
     <>
    <div style={{width:"200px" , height:"100px" , backgroundColor:"yellow" ,margin:"auto",marginTop:"50px"}}>
-   <div style={{width:"100px" , height:"40px" , backgroundColor:"red" ,margin:"auto",marginTop:"40px"}}>
+   <div style={{width:"100px" , height:"40px" , backgroundColor:"red" ,margin:"auto",marginTop:"100px"}}>
        <div style={{width:"80px" , height:"20px" , backgroundColor:"blue" ,margin:"auto",marginTop:"60px"}}>
 
        </div>
@@ -61,7 +217,7 @@ const App=()=>{
   )
 }
 
-export default App;
+export default App;*/
 
 
 
