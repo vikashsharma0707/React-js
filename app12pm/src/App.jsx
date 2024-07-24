@@ -1,4 +1,128 @@
-import Cybrom2 from "./Cybrom2";
+import  { useContext, useState } from 'react';
+import { mybgCcontext } from './Ccolor';
+
+
+const App = () => {
+  const [txtval, setTxtVal] = useState("");
+  const { color, setColor } = useContext(mybgCcontext);
+
+  return (
+    <>
+      <h1>My BG Color App</h1>
+      Enter color: <input type="text" value={txtval} onChange={(e) => setTxtVal(e.target.value)} />
+      <button onClick={() => setColor(txtval)}>Change color</button>
+      <div style={{ width: "400px", height: "300px", border: "1px solid grey", backgroundColor: color }}></div>
+    </>
+  );
+};
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import { useContext } from "react";
+import { myLoginContext } from "./LoginContext";
+
+import Author from "./Author";
+import Unauthor from "./Unauthor";
+
+
+
+const App=()=>{
+  const {user} =useContext(myLoginContext);
+  return(
+    <>
+      <h1>my login App</h1>
+      {user.auth ? <Author/> : <Unauthor/>}
+    </>
+  )
+}
+
+export default App;*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import { useContext, useState } from "react"
+import { mybgContext } from "./Changecolor";
+
+
+
+const App=()=>{
+  const [txtval,setTxtval] =useState("")
+  const [color,setColor] =useContext(mybgContext);
+  return(
+    <>
+       <h1>my bgColor App</h1>
+       Enter Color :<input type="text" value={txtval} onChange={(e)=>{setTxtval(e.target.value)}}/>
+       <button onClick={()=>{setColor(txtval)}}>Change color</button>
+
+       <div style={{width:"400px",height:"300px",border:"1px solid grey" ,backgroundColor:color}}>
+
+       </div>
+    </>
+  )
+}
+
+export default App*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import Cybrom2 from "./Cybrom2";
 
 const App=()=>{
 
@@ -11,7 +135,7 @@ const App=()=>{
   )
 }
 
-export default App;
+export default App;*/
 
 
 
