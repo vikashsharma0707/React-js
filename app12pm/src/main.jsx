@@ -6,12 +6,14 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 // import "./Index.css"
 // import "./File.css"
 
-import Ccolor from './Ccolor.jsx'
+//import Ccolor from './Ccolor.jsx'
+import store from './store.jsx'
+import { Provider } from 'react-redux'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <Ccolor>
-    <App/>
-  </Ccolor>
+  <Provider store={store}>
+         <App/>
+  </Provider>
 
 
 )
