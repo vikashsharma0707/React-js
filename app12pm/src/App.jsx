@@ -1,5 +1,120 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { addTask } from "./todoSlice";
+
+
+const App=()=>{
+  const [val,setVal] =useState("");
+  const mytask = useSelector((state)=>state.todolist.task);
+  const mydis =useDispatch();
+  const taskAdd=()=>{
+    mydis(addTask({id: Date.now() ,task:val}))
+  }
+
+  let sno=0;
+  const ans =mytask.map((key)=>{
+    sno++;
+    return(
+      <>
+        <tr>
+          <td>{sno}</td>
+          <td>{key.task}</td>
+
+
+
+        </tr>
+      
+      </>
+    )
+  })
+
+  return(
+    <>
+    <h1>to do app</h1>
+    Enter Task;
+    <input type="text" value={val} onChange={(e)=>{setVal(e.target.value)}} />
+    <button  onClick={taskAdd}>Add</button>
+    <hr   size="4"  color="blue"/>
+    <table>
+      <tr>
+
+        <th>sno</th>
+        <th>Task</th>
+      </tr>
+         {ans}
+    </table>
+    </>
+  )
+}
+
+export default App;
+
+
+
+
+
+
+
+
+
+/*import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./Layout";
+import Home from "./components/Home";
+import Registration from "./components/Registration";
+import Login from "./components/Login";
+import DashBoard from "./components/DashBoard";
+const App=()=>{
+  return(
+    <>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout/>} >
+             <Route index element={<Home/>} />
+             <Route path="home" element={<Home/>}/>
+             <Route path="registration" element={<Registration/>}/>
+             <Route path="login" element={<Login/>}/>
+             <Route path="loginyes" element={<DashBoard/>}/>
+            </Route>
+          </Routes>
+        </BrowserRouter>
+    </>
+  )
+}
+export default App;*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { changeColor } from "./Colorslice";
 
 
@@ -22,7 +137,7 @@ const App=()=>{
     </>
   )
 }
-export default App;
+export default App;*/
 
 
 

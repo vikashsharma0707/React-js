@@ -1,0 +1,32 @@
+{
+  "userdata": [
+    {
+      "name": "jay",
+      "userid": 1,
+      "email": "cybrom@gmail.com",
+      "password": "1342234",
+      "id": "e1a1"
+    },
+    {
+      "id": "867c",
+      "name": "jay",
+      "userid": "23322",
+      "email": "react@gmail.com",
+      "password": "343222"
+    },
+    {
+      "id": "45a3",
+      "name": "jay",
+      "userid": "3233",
+      "email": "cybrom@gmail.com",
+      "password": "45586676"
+    },
+    {
+      "id": "784a",
+      "name": "",
+      "userid": "",
+      "email": "",
+      "password": ""
+    }
+  ]
+}

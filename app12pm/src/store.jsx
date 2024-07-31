@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import myreducer from "./Colorslice"
+import todoReducer from "./todoSlice"
 
 const store=configureStore({
     reducer:{
-           mycolor:myreducer,
+           todolist:todoReducer
     }
 
 })
