@@ -1,53 +1,293 @@
-import { useState } from "react";
+
+import  { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTask } from "./todoSlice";
+import { addTask, compTask, delTask,  } from "./todoSlice";
 
+const App = () => {
+  const mywork = useSelector((state) => state.todo.task);
+  const [val, setVal] = useState("");
+  const dispatch = useDispatch();
+  console.log(mywork);
 
-const App=()=>{
-  const [val,setVal] =useState("");
-  const mytask = useSelector((state)=>state.todolist.task);
-  const mydis =useDispatch();
-  const taskAdd=()=>{
-    mydis(addTask({id: Date.now() ,task:val}))
+  const addmyTask = () => {
+    
+      dispatch(addTask({ id: Date.now(), work: val,status:"uncomplete"}));
+      setVal("");
+    
+  };
+
+  const recDel = (id) => {
+    dispatch(delTask(id));
+  };
+
+  const recComp=(id)=>{
+    dispatch(compTask(id))
   }
 
-  let sno=0;
-  const ans =mytask.map((key)=>{
+ 
+
+  let sno = 0;
+  const ans = mywork.map((key) => {
     sno++;
-    return(
+    return (
       <>
-        <tr>
-          <td>{sno}</td>
-          <td>{key.task}</td>
+       <tr>
+           <td>{sno}</td>
+           {/* <td>{key.status=="complete"? (<span style={{color:"red",textDecoration:"line-through"}}>{key.work}></span>})</td> */}
+           
+            <td> 
+  {key.status === "complete" ? (
+    <span style={{ color: "red", textDecoration: "line-through" }}>
+      complete
+    </span>
+  ) : (
+    <span>uncomplete</span>
+  )}
+</td>
+           <td>
+              <button onClick={()=>{recDel(key.id)}}>Delete</button>
+           </td>
 
+           <td>
+            <button onClick={()=>{recComp(key.id)}}>Complete Task</button>
+           </td>
 
-
-        </tr>
+       </tr>
       
       </>
-    )
-  })
+      
+      
+    );
+  });
 
-  return(
+  return (
     <>
-    <h1>to do app</h1>
-    Enter Task;
-    <input type="text" value={val} onChange={(e)=>{setVal(e.target.value)}} />
-    <button  onClick={taskAdd}>Add</button>
-    <hr   size="4"  color="blue"/>
-    <table>
-      <tr>
-
-        <th>sno</th>
-        <th>Task</th>
-      </tr>
-         {ans}
-    </table>
+      <h1>To Do App</h1>
+      Enter Task: <input type="text" value={val} onChange={(e) => setVal(e.target.value)} />
+      <button onClick={addmyTask}>Add</button>
+      <hr size="4" color="red" />
+      <table border="1" width="400">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Your Task</th>
+            <th>Delete</th>
+          
+          </tr>
+        </thead>
+        <tbody>{ans}</tbody>
+      </table>
     </>
-  )
-}
+  );
+};
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { useState } from "react";
+// import { useDispatch, useSelector } from "react-redux";
+// import { addTask } from "./todoSlice";
+
+// const App=()=>{
+//   const mywork =useSelector((state)=>state.todo.task);
+//   const [val,setVal]  = useState("");
+//   const dispatch =useDispatch();
+//   console.log(mywork);
+
+
+//   const addmyTask=()=>{
+//     dispatch(addTask({id:Date.now(), work:val , status:"uncomplete"}))
+//     setVal()
+//   }
+
+//   const recDel=(id)=>{
+//     dispatch(delTask(id))
+//   }
+
+//   const recComp=(id)=>{
+//     dispatch(complete(id));
+//   }
+
+//   let sno=0;
+//   const ans=mywork.map((key)=>{
+//     sno++;
+//     return(
+//       <>
+//          <tr>
+//           <td>{sno}</td>
+//           <td>{key.status=="complete"? <span style={{color:"red", textDecoration:"line-through"}}></span>}</td>
+//           <td>
+//             <button onClick={()=>{recDel(key.id)}}>Delete</button>
+//           </td>
+
+//           <td>
+//             <button onClick={()=>{recComp(key.id)}}>complete Task</button>
+//           </td>
+//          </tr>
+//       </>
+//     )
+//   })
+
+
+//   return(
+//     <>
+//        <h1>To Do App</h1>
+//         Enter Task :<input type="text" value={val}  onChange={(e)=>{setVal(e.target.value)}}/>
+//         <button  onClick={()=>{recComp(key.id)}}>Add</button>
+//         <hr size="4"  color="red"/>
+//         <table  border="1"  width="400">
+//           <tr>
+//             <th>#</th>
+//             <th>Your Task</th>
+//             <th></th>
+          
+//           </tr>
+//             {ans}
+//         </table>
+//     </>
+//   )
+// }
+
+// export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import Layp from "./Layp";
+// import Home from "./Navbar.jsx/Home ";
+// import About from "./Navbar.jsx/About";
+
+// const App=()=>{
+//   return(
+//     <>
+//       <BrowserRouter>
+
+//            <Routes>
+//             <Route  path="/"  element={<Layp/>}>
+//                <Route index element={<Home/>}/>
+//                <Route path="home"  element={<Home/>}/>
+//                <Route path="about" element={<About/>}/>
+
+
+//             </Route>
+//            </Routes>
+
+//       </BrowserRouter>
+//     </>
+//   )
+// }
+
+// export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { useState } from "react";
+// import { useDispatch, useSelector } from "react-redux";
+// import { addTask } from "./todoSlice";
+
+
+// const App=()=>{
+//   const [val,setVal] =useState("");
+//   const mytask = useSelector((state)=>state.todolist.task);
+//   const mydis =useDispatch();
+
+//   console.log(mytask)
+
+//   const taskAdd=()=>{
+//     mydis(addTask({id: Date.now() ,task:val}))
+//     setVal("");
+//   }
+
+//   const recDel=(id)=>{
+//      dispatch()
+//   }
+
+//   let sno=0;
+//   const ans =mytask.map((key)=>{
+//     sno++;
+//     return(
+//       <>
+//         <tr>
+//           <td>{sno}</td>
+//           <td>{key.task}</td>
+//           <td>
+//             <button  onClick={()=>{}}></button>
+//           </td>
+          
+//         </tr>
+      
+//       </>
+//     )
+//   })
+
+//   return(
+//     <>
+//     <h1>to do app</h1>
+//     Enter Task;
+//     <input type="text" value={val} onChange={(e)=>{setVal(e.target.value)}} />
+//     <button  onClick={taskAdd}>Add</button>
+//     <hr   size="4"  color="blue"/>
+//     <table>
+//       <tr>
+
+//         <th>sno</th>
+//         <th>Task</th>
+//       </tr>
+//          {ans}
+//     </table>
+//     </>
+//   )
+// }
+
+// export default App;
 
 
 
